@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{
+  max-width: 800px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#list {
+  border: 2px solid #a9a9a9;
+  border-radius: 10px;
+}
+
+.item {
+  padding: 20px;
+  border-bottom: 1px solid #a9a9a9;
+  text-align: left;
+  font-weight: 600;
+}
+
+.item:nth-last-child(1){
+  border-bottom: none;
+}
+
+.add{
+  float: left;
+}
+
+button{
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.add{
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+  background: #009200;
+  font-weight: 600;
+}
+
+.edit{
+  display: inline-block;
+}
+
+.delete{
+  display: inline-block;
+}
+
+.button-container{
+  float: right;
+  margin-top: -8px;
+}
+
+.title{
+  width: fit-content;
+  display: inline-block;
+}

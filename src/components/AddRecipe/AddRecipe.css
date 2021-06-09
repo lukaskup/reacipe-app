@@ -1,0 +1,35 @@
+.steps label{
+    display: block;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.steps button{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+}
+
+input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.ingredients-item{
+    border: 1px solid black;
+    padding: 0 0 20px 0;
+    margin-top: 20px;
+}
+
+.ingredients-item label {
+    font-size: 14px;
+    margin-bottom: -15px;
+    margin-top: 20px;
+}

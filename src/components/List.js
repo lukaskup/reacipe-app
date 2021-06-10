@@ -1,4 +1,4 @@
-import data from "../api/recipies.json";
+import data from "../api/recipes.json";
 import {React} from "react";
 import {Link} from 'react-router-dom';
 

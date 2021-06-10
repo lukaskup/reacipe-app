@@ -1,12 +1,14 @@
 import {React, useState} from 'react';
 import "./AddRecipe.css";
-import data from "./../../api/recipies.json";
+import data from "./../../api/recipes.json";
+import { useHistory } from 'react-router';
+import axios from 'axios';
 
 function AddRecipe() {
-
     const [recipeName, setRecipeName] = useState('');
     const [steps, setSteps] = useState(['']);
     const [ingredients, setIngredients] = useState([{name: '', qty: 0, unit: ''}]);
+    const history = useHistory()
 
     const handleOnChangeStep = (value, index) => {
         let newSteps = steps;
@@ -32,7 +34,7 @@ function AddRecipe() {
         setIngredients([...newIngredients]);
     }
 
-    const handleSaveRecipe = () => {
+    const handleSaveRecipe = async function ()  {
         let newRecipe = {
             "recipe": steps
         }
@@ -43,11 +45,11 @@ function AddRecipe() {
 
         let dataToSave = {...data};
         dataToSave[recipeName] = newRecipe;
-
-
-        console.log(dataToSave);
+        const res = await axios.post('/add', dataToSave)
+        if (res.status === 200) {
+            history.push('/');
+        }
     }
-
     return (
         <div className={"recipe-form"} style={{"paddingBottom": "100px"}}>
             <div className={"steps"} style={{"marginBottom": "100px"}}>
